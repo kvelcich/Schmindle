@@ -1,0 +1,19 @@
+{
+    "name": "schmindle",
+    "version": "0.1.0",
+    "description": "A better reader app.",
+    "main": "src/js/main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://github.com/kvelcich/schmindle",
+    "author": "Kevin Velcich",
+    "devDependencies": {
+        "electron": "^2.0.18"
+    },
+    "build": {
+        "extraResources": [
+            "./public/**"
+        ]
+    }
+}
