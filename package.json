@@ -4,16 +4,26 @@
     "description": "A better reader app.",
     "main": "src/js/main.js",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "lint": "eslint --ignore-path .esignore .",
+        "lint-fix": "eslint --ignore-path .esignore --fix .",
+        "lint-help": "eslint"
     },
     "repository": "https://github.com/kvelcich/schmindle",
     "author": "Kevin Velcich",
     "devDependencies": {
-        "electron": "^2.0.18"
+        "electron": "^2.0.18",
+        "eslint": "^6.2.2",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-strongloop": "^2.1.0",
+        "eslint-plugin-import": "^2.18.2"
     },
     "build": {
         "extraResources": [
             "./public/**"
         ]
+    },
+    "dependencies": {
+        "electron-log": "^3.0.7"
     }
 }
