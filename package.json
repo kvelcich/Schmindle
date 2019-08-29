@@ -12,7 +12,6 @@
     "repository": "https://github.com/kvelcich/schmindle",
     "author": "Kevin Velcich",
     "devDependencies": {
-        "electron": "^2.0.18",
         "eslint": "^6.2.2",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-strongloop": "^2.1.0",
@@ -24,6 +23,7 @@
         ]
     },
     "dependencies": {
+        "electron": "^2.0.18",
         "electron-log": "^3.0.7"
     }
 }
