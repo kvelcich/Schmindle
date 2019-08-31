@@ -647,6 +647,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentatio
 }
 
 .toolbar {
+  /* ADDED CODE TO HIDE TOOLBAR visibility: hidden; */
   position: relative;
   left: 0;
   right: 0;

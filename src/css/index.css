@@ -42,6 +42,10 @@ div.container {
     background-color: var(--gray8);
 }
 
+#sidebar .option i {
+    padding-right: 10px;
+}
+
 #viewer {
     height: 100%;
 
