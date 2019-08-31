@@ -25,7 +25,7 @@ function addNewEntry(fileName, filePath) {
   }
 }
 
-document.getElementById('myButton').addEventListener('click', () => {
+document.getElementById('open_pdf').addEventListener('click', () => {
   dialog.showOpenDialog({
     properties: ['openFile'],
     filters: [{ name: 'PDFs', extensions: ['pdf'] }],

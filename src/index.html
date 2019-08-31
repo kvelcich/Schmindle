@@ -4,18 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>schmindle</title>
+        <link rel='stylesheet' href='./css/colors.css'>
+        <link rel='stylesheet' href='./css/fonts.css'>
         <link rel='stylesheet' href='./css/index.css'>
+        <link rel='stylesheet' href='./css/fonts/fontawesome/css/all.css'>
     </head>
     <body>
+        <div class='container'>
+            <div id='sidebar' style='display: table-cell;'>
+                <a href="#"><div id='open_pdf' class='option'>Open PDF</div></a>
+            </div>
 
-        <div class='picker'>
-            <button id='myButton'>Select PDF</button>
+            <div id='viewer' style='display: table-cell;'>
+
+            </div>
         </div>
-
-        <div class='viewer' id='viewer'>
-
-        </div>
-
         <script>
             require('./js/renderer.js');
         </script>
