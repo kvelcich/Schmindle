@@ -5,7 +5,9 @@
     "main": "src/js/main.js",
     "scripts": {
         "start": "electron .",
-        "lint": "eslint --ignore-path .esignore .",
+        "lint": "npm run lint-css && npm run lint-js",
+        "lint-css": "stylelint src/css/*.css",
+        "lint-js": "eslint --ignore-path .esignore .",
         "lint-fix": "eslint --ignore-path .esignore --fix .",
         "lint-help": "eslint"
     },
@@ -15,7 +17,9 @@
         "eslint": "^6.2.2",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-strongloop": "^2.1.0",
-        "eslint-plugin-import": "^2.18.2"
+        "eslint-plugin-import": "^2.18.2",
+        "stylelint": "^10.1.0",
+        "stylelint-config-standard": "^18.3.0"
     },
     "build": {
         "extraResources": [
