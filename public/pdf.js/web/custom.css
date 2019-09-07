@@ -1,0 +1,80 @@
+.customToolbarButton,
+.customTextInput {
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  background-color: white;
+  margin: 3px 7px 3px 7px;
+  text-align: center;
+}
+
+/* Alright, so I'm not really sure why this needs to be 2 pixels shorter than
+ * a 'button' element, but it's aligned, so good enough for now. */
+.customTextInput {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 128px;
+}
+
+.customTextInput input,
+.customTextInput i {
+  border-width: 0;
+  height: auto;
+  display: block;
+  margin: 2px 10px 2px 10px;
+}
+
+.customTextInput input {
+  width: 100%;
+}
+
+.customTextInput i {
+  width: auto;
+}
+
+.customTextInput input {
+  margin-right: 0;
+  font-family: Lato, sans-serif;
+}
+
+.customToolbarButton {
+  height: 26px;
+  width: 36px;
+}
+
+.customToolbarButton:hover {
+  background-color: #eee;
+}
+
+.customToolbarButton:active {
+  background-color: #e0e0e0;
+}
+
+.customButtonLeft {
+  margin-right: -1px;
+
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.customButtonMiddle {
+  margin-left: -1px;
+  margin-right: -1px;
+
+  border-radius: 0;
+}
+
+.customButtonRight {
+  margin-left: -1px;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#sidebarToggle, #viewFind, #pageNumber, #numPages, 
+#presentationMode, #openFile, #print, #download, 
+#viewBookmark, #secondaryToolbarToggle, #scaleSelectContainer, 
+#findbarOptionsTwoContainer, 
+.pageUp, .pageDown {
+  display: none !important;
+}

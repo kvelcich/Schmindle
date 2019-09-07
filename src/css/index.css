@@ -1,5 +1,7 @@
 html, body {
   width: 100%;
+
+  max-width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -16,6 +18,8 @@ div.container {
 }
 
 #sidebar {
+
+  box-sizing: border-box;
   width: 200px;
   height: 100%;
   padding-top: 30px;
@@ -25,19 +29,18 @@ div.container {
 
 #sidebar .option {
   width: 200px;
-  padding: 5px 0 5px 20px;
+  padding: 7px 0 7px 20px;
 
   color: var(--gray0);
+  font-weight: 700;
   font-size: 14px;
   font-family: Lato, sans-serif;
 
-  opacity: 1;
-
-  transition: opacity 1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #sidebar .option:hover {
-  background: rgba(var(--gray8), 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #sidebar .option i {
@@ -53,6 +56,8 @@ div.container {
 }
 
 #viewer iframe {
+
+  display:block;
   width: 100%;
   height: 100%;
 

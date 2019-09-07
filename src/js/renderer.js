@@ -21,7 +21,8 @@ function addNewEntry(fileName, filePath) {
   const linkPath = `${config.local.collectionPath}${fileName}`;
   if (!fs.existsSync(linkPath)) {
     fs.linkSync(filePath, `${config.local.collectionPath}${fileName}`);
-    log.info(`Created hard link of ${fileName} at ${config.local.collectionPath}`);
+    log.info(`Created hard link of ${fileName} at \
+            ${config.local.collectionPath}`);
   }
 }
 

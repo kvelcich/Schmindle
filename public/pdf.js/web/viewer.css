@@ -696,10 +696,12 @@ html[dir='rtl'] #sidebarResizer {
 
 #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
-  height: 32px;
-  background-color: #474747; /* fallback */
-  background-image: url(images/texture.png),
-                    linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95));
+  height: 38px;
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5; /* fallback */
+  /*background-image: url(images/texture.png),
+                    linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95)); */
 }
 html[dir='ltr'] #toolbarContainer, .findbar, .secondaryToolbar {
   box-shadow: inset 0 1px 1px hsla(0,0%,0%,.15),
@@ -716,6 +718,7 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
 
 #toolbarViewer {
   height: 32px;
+  width: 100%;
 }
 
 #loadingBar {
@@ -811,7 +814,7 @@ html[dir='rtl'] .findbar {
 }
 
 #findInput {
-  width: 200px;
+  /* width: 200px; */
 }
 #findInput::-webkit-input-placeholder {
   color: hsl(0, 0%, 75%);
@@ -979,7 +982,6 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .toolbarButton,
 .secondaryToolbarButton,
 .overlayButton {
-  border: 0 none;
   background: none;
   width: 32px;
   height: 25px;
@@ -1219,20 +1221,6 @@ html[dir='rtl'] .toolbarButton:first-child {
   width: 30px;
   display: inline-block;
   height: 1px;
-}
-
-html[dir='ltr'] #findPrevious {
-  margin-left: 3px;
-}
-html[dir='ltr'] #findNext {
-  margin-right: 3px;
-}
-
-html[dir='rtl'] #findPrevious {
-  margin-right: 3px;
-}
-html[dir='rtl'] #findNext {
-  margin-left: 3px;
 }
 
 .toolbarButton::before,

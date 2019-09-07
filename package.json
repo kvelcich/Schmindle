@@ -13,7 +13,7 @@
         "lint-js-fix": "eslint --ignore-path .esignore --fix .",
         "lint-help": "eslint"
     },
-    "repository": "https://github.com/kvelcich/schmindle",
+    "repository": "https://github.com/kvelcich/Schmindle",
     "author": "Kevin Velcich",
     "devDependencies": {
         "eslint": "^6.2.2",

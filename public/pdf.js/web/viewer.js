@@ -145,6 +145,7 @@ function getViewerConfiguration() {
       next: document.getElementById('next'),
       zoomIn: document.getElementById('zoomIn'),
       zoomOut: document.getElementById('zoomOut'),
+      zoomRestore: document.getElementById('zoomRestore'),
       viewFind: document.getElementById('viewFind'),
       openFile: document.getElementById('openFile'),
       print: document.getElementById('print'),
@@ -797,7 +798,9 @@ var PDFViewerApplication = {
 
     this.pdfViewer.currentScaleValue = newScale;
   },
-
+  zoomRestore: function zoomRestore(ticks) {
+    this.pdfViewer.currentScaleValue = 'page-width';
+  },
   get pagesCount() {
     return this.pdfDocument ? this.pdfDocument.numPages : 0;
   },
@@ -1614,6 +1617,7 @@ var PDFViewerApplication = {
     eventBus.on('previouspage', webViewerPreviousPage);
     eventBus.on('zoomin', webViewerZoomIn);
     eventBus.on('zoomout', webViewerZoomOut);
+    eventBus.on('zoomrestore', webViewerZoomRestore);
     eventBus.on('pagenumberchanged', webViewerPageNumberChanged);
     eventBus.on('scalechanged', webViewerScaleChanged);
     eventBus.on('rotatecw', webViewerRotateCw);
@@ -1694,6 +1698,7 @@ var PDFViewerApplication = {
     eventBus.off('previouspage', webViewerPreviousPage);
     eventBus.off('zoomin', webViewerZoomIn);
     eventBus.off('zoomout', webViewerZoomOut);
+    eventBus.off('zoomrestore', webViewerZoomRestore);
     eventBus.off('pagenumberchanged', webViewerPageNumberChanged);
     eventBus.off('scalechanged', webViewerScaleChanged);
     eventBus.off('rotatecw', webViewerRotateCw);
@@ -2135,6 +2140,10 @@ function webViewerZoomIn() {
 
 function webViewerZoomOut() {
   PDFViewerApplication.zoomOut();
+}
+
+function webViewerZoomRestore() {
+  PDFViewerApplication.zoomRestore();
 }
 
 function webViewerPageNumberChanged(evt) {
@@ -13207,6 +13216,11 @@ function () {
       });
       items.zoomOut.addEventListener('click', function () {
         eventBus.dispatch('zoomout', {
+          source: self
+        });
+      });
+      items.zoomRestore.addEventListener('click', function () {
+        eventBus.dispatch('zoomrestore', {
           source: self
         });
       });
