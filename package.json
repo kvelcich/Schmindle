@@ -31,7 +31,7 @@
         ]
     },
     "dependencies": {
-        "electron": "^2.0.18",
+        "electron": "^7.2.4",
         "electron-log": "^3.0.7"
     }
 }
